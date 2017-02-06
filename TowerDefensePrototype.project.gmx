@@ -11,11 +11,19 @@
     <sprite>sprites\spr_enemy</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_rectangle</path>
+  </paths>
+  <scripts name="scripts">
+    <script>scripts\scr_predictive_aim.gml</script>
+    <script>scripts\scr_move_rectangle.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_tower</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_spawner</object>
+    <object>objects\obj_control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
