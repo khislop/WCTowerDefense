@@ -37,11 +37,13 @@ image_speed = 0;
 
 
 // Variables for scr_move_rectangle
-width = 600;
-height = 500;
+width = 608;
+height = 512;
 
-x1 = x - 2*speed;
-y1 = y - 2*speed;
+//x1 = x - 2*speed;
+//y1 = y - 2*speed;
+x1 = x;
+y1 = y;
 x2 = x + width;
 y2 = y + height;
 </string>

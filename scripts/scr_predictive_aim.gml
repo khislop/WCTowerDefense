@@ -5,8 +5,6 @@
 // Read in arguments
 var projectile = argument0;
 var target = argument1;
-show_debug_message(projectile.speed);
-show_debug_message(target.speed);
 
 // Find the delta x and delta y
 var dx = target.x - projectile.x;

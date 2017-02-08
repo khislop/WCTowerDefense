@@ -27,7 +27,44 @@
             <kind>1</kind>
             <string>// Spawn tower where clicked
 
-instance_create(mouse_x, mouse_y, spr_tower);
+// We will want to change this with less hard coded numbers.
+instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_green);
+
+x = 0;
+y = 0;
+
+while(x &lt; window_get_width()){
+    draw_line(x, 0, x, window_get_height());
+    x = x + 32;
+}
+
+while(y &lt; window_get_height()){
+    draw_line(0, y, window_get_width(), y);
+    y = y + 32;
+}
 </string>
           </argument>
         </arguments>
