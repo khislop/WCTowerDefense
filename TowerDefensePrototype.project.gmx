@@ -9,8 +9,12 @@
     <sprite>sprites\spr_tower</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_tile_ground</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\background1</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\pth_rectangle</path>
   </paths>
