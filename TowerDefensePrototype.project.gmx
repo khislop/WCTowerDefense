@@ -10,6 +10,8 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_tile_ground</sprite>
+    <sprite>sprites\spr_playerHp</sprite>
+    <sprite>sprites\spr_gameover</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -31,6 +33,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
