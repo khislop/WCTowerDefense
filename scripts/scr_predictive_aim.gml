@@ -1,6 +1,6 @@
 // Script returns the direction, in degrees, that the projectile needs to be fired to hit the target
 // Takes two arguments, the projectile being fired, and the target.
-// Returns noone (GML version of null) if the target can't be hit
+// Returns noone (GML version of null) if the target can't be hit.
 
 // Read in arguments
 var projectile = argument0;

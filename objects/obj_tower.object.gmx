@@ -25,11 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxCount = 30;
+            <string>// Setup initial variables
+maxCount = 30;
 count = 0;
 fireSpeed = 8;
 range = 200;
+<<<<<<< HEAD
 cost = 5;
+=======
+
+>>>>>>> 14f8bd60e378d8aa6408e1e521469729984297b6
 </string>
           </argument>
         </arguments>
