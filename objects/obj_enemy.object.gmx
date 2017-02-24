@@ -35,7 +35,7 @@ direction = 270;
 // Don't animate the enemy, animation frames are used for life visualization
 image_speed = 0;
 // Move along the path
-//path_start(pth_rectangle, speed, path_action_stop,1);
+path_start(pth_rectangle, speed, path_action_stop,1);
 
 // Variables for scr_move_rectangle
 width = 608;
@@ -50,28 +50,6 @@ x2 = x + width;
 y2 = y + height;
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>701</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_score</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>+5</string>
           </argument>
         </arguments>
       </action>
@@ -93,7 +71,8 @@ y2 = y + height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_move_rectangle();
+            <string>//scr_move_rectangle();
+
 
 </string>
           </argument>
@@ -122,6 +101,7 @@ y2 = y + height;
 // If health is less than one, destroy object
 if(life &lt; 1){
     instance_destroy();
+    obj_control.money += 5;
 }else{
     image_index = maxLife - life;
 }
@@ -151,21 +131,22 @@ with(other){
       </action>
       <action>
         <libid>1</libid>
-        <id>721</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_health</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>-1</relative>
+        <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>-1</string>
+            <kind>1</kind>
+            <string>obj_control.player_hp -= 1;
+</string>
           </argument>
         </arguments>
       </action>
