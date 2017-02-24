@@ -35,20 +35,20 @@ direction = 270;
 // Don't animate the enemy, animation frames are used for life visualization
 image_speed = 0;
 // Move along the path
-path_start(pth_rectangle, speed, path_action_stop,1);
+//path_start(pth_rectangle, speed, path_action_stop,1);
 
 // Variables for scr_move_rectangle
-/*width = 608;
+width = 608;
 height = 512;
-*/
+
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
-/*
+
 x1 = x;
 y1 = y;
 x2 = x + width;
 y2 = y + height;
-*/
+
 </string>
           </argument>
         </arguments>
@@ -93,7 +93,7 @@ y2 = y + height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//scr_move_rectangle();
+            <string>scr_move_rectangle();
 
 </string>
           </argument>
