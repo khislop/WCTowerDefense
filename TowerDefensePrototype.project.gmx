@@ -27,6 +27,7 @@
     <script>scripts\scr_move_rectangle.gml</script>
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_price.gml</script>
+    <script>scripts\scr_options.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_large</font>
@@ -41,6 +42,7 @@
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>
     <object>objects\obj_menu</object>
+    <object>objects\obj_options</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
