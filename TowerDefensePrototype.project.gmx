@@ -17,6 +17,7 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\bg_game_over</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_rectangle</path>
@@ -25,6 +26,7 @@
     <script>scripts\scr_predictive_aim.gml</script>
     <script>scripts\scr_move_rectangle.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_price.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_large</font>
@@ -44,6 +46,7 @@
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_options</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

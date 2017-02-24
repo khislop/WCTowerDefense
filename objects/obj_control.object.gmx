@@ -28,6 +28,10 @@
             <string>cost = 5;
 player_hp = 5;
 money = 10;
+
+
+// Run setup scripts
+scr_price();
 </string>
           </argument>
         </arguments>
@@ -51,7 +55,7 @@ money = 10;
           <argument>
             <kind>1</kind>
             <string>if (player_hp == 0)
-   room_goto(room1);
+   room_goto(rm_game_over);
 </string>
           </argument>
         </arguments>
@@ -77,9 +81,10 @@ money = 10;
             <string>// Spawn tower where clicked
 
 // We will want to change this with less hard coded numbers.
-if (money &gt;= cost) {
+if (money &gt;= global.price[0]) {
    instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
-   money -= cost;}
+   money -= cost;
+}
 </string>
           </argument>
         </arguments>
