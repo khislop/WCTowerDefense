@@ -12,6 +12,7 @@
     <sprite>sprites\spr_tile_ground</sprite>
     <sprite>sprites\spr_playerHp</sprite>
     <sprite>sprites\spr_gameover</sprite>
+    <sprite>sprites\spr_cursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -23,17 +24,26 @@
   <scripts name="scripts">
     <script>scripts\scr_predictive_aim.gml</script>
     <script>scripts\scr_move_rectangle.gml</script>
+    <script>scripts\scr_menu.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_large</font>
+    <font>fonts\fnt_large_jp</font>
+    <font>fonts\fnt_small</font>
+    <font>fonts\fnt_small_jp</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_tower</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_1</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_options</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
