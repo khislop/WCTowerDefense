@@ -144,7 +144,10 @@ while(y &lt; window_get_height()){
           <argument>
             <kind>1</kind>
             <string>// Display the money
-draw_text_colour(0,32,"Money: " + string(money), c_yellow, c_yellow, c_yellow, c_yellow, 1);
+draw_set_font(-1);
+draw_set_colour(c_yellow);
+//draw_text_colour(128,64,"Money: " + string(money), c_yellow, c_yellow, c_yellow, c_yellow, 1);
+draw_text_transformed(128,64,"Money: " + string(money), 2, 2, 0)
 // Draw the HP
 for (var i = 0; i &lt; player_hp;i++)
 {
