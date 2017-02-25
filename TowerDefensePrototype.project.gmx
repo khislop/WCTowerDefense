@@ -28,6 +28,8 @@
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_price.gml</script>
     <script>scripts\scr_options.gml</script>
+    <script>scripts\scr_bfs.gml</script>
+    <script>scripts\scr_reachable_point.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_large</font>
