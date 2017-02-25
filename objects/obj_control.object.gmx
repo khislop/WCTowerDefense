@@ -79,9 +79,11 @@ scr_price();
           <argument>
             <kind>1</kind>
             <string>// Spawn tower where clicked
-
 // We will want to change this with less hard coded numbers.
-if (money &gt;= global.price[0]) {
+if(collision_point(mouse_x, mouse_y, obj_tower, false, true)){
+    show_debug_message("Clicked Tower");
+}
+if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower, false, true)) {
    instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
    money -= global.price[0];
 }
