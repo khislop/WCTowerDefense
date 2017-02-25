@@ -79,9 +79,11 @@ scr_price();
           <argument>
             <kind>1</kind>
             <string>// Spawn tower where clicked
-
 // We will want to change this with less hard coded numbers.
-if (money &gt;= global.price[0]) {
+if(collision_point(mouse_x, mouse_y, obj_tower, false, true)){
+    show_debug_message("Clicked Tower");
+}
+if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower, false, true)) {
    instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
    money -= global.price[0];
 }
@@ -142,7 +144,10 @@ while(y &lt; window_get_height()){
           <argument>
             <kind>1</kind>
             <string>// Display the money
-draw_text_colour(0,32,"Money: " + string(money), c_yellow, c_yellow, c_yellow, c_yellow, 1);
+draw_set_font(-1);
+draw_set_colour(c_yellow);
+//draw_text_colour(128,64,"Money: " + string(money), c_yellow, c_yellow, c_yellow, c_yellow, 1);
+draw_text_transformed(128,64,"Money: " + string(money), 2, 2, 0)
 // Draw the HP
 for (var i = 0; i &lt; player_hp;i++)
 {
