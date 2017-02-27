@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_control" x="0" y="0" name="inst_3CC71FF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="176" y="144" name="inst_AA9656C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_next_wave_button" x="832" y="640" name="inst_B3D29CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="0" y="192" w="64" h="64" xo="0" yo="0" id="10000007" name="inst_3ACF69E1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

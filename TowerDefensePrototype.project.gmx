@@ -13,6 +13,7 @@
     <sprite>sprites\spr_playerHp</sprite>
     <sprite>sprites\spr_gameover</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_next_wave_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -43,6 +44,7 @@
     <object>objects\obj_control</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_options</object>
+    <object>objects\obj_next_wave_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

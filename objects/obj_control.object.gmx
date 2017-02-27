@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cost = 5;
+            <string>// Instantiate global state vars
+global.in_wave = false;
+global.wave_num = 0;
+
+// Create initial vars
+cost = 5;
 player_hp = 5;
 money = 10;
 
@@ -80,10 +85,7 @@ scr_price();
             <kind>1</kind>
             <string>// Spawn tower where clicked
 // We will want to change this with less hard coded numbers.
-if(collision_point(mouse_x, mouse_y, obj_tower, false, true)){
-    show_debug_message("Clicked Tower");
-}
-if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower, false, true)) {
+if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower, false, true) &amp;&amp; !collision_point(mouse_x, mouse_y, obj_next_wave_button, false, true)) {
    instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
    money -= global.price[0];
 }
