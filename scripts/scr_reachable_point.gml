@@ -1,5 +1,5 @@
 // Script finds available points to move to that are adjacent to a point being passed in
-
+/*
 var x = argument0;
 var y = argument1;
 var pathsArray = argument2;
@@ -7,8 +7,8 @@ var pathsArray = argument2;
 var adjList = ds_list_create();
 
 if(x - 1 >= 0) {
-    if(pathsArray[x-1, y] == 0) {
-        var tempArray = [x-1, y];
+    if(pathsArray[x-1,y] == 0) {
+        var tempArray = pathsArray[x-1,y];
         ds_list_add(adjList, "x-1, y");
     }
 }
