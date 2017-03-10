@@ -33,7 +33,7 @@ global.current_tower = noone;
 // Create initial vars
 cost = 5;
 player_hp = 5;
-money = 10;
+money = 50;
 
 
 // Run setup scripts
@@ -63,24 +63,11 @@ scr_price();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Select tower from menu
-
-// Tower width/height incase that changes. Currenlty all towers are 32*32
-tower_width = 32;
-tower_height = 32;
-
-if(mouse_check_button_pressed(mb_left)){
-    for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
-        if(mouse_x &gt; ((button_margin_v * (i + 1)) - ((tower_width) / 2)) &amp;&amp; mouse_x &lt; ((button_margin_v * (i + 1)) + ((tower_width) / 2))){
-            if(mouse_y &gt; (room_height - button_margin_h) - (tower_height/2) &amp;&amp; mouse_y &lt; (room_height - button_margin_h) + (tower_height/2)){
-                global.current_tower = global.tower[i];
-                //show_debug_message("Clicked");
-            }
-        }
-    }
-}
-
-
+            <string>if (player_hp == 0)
+   room_goto(rm_game_over);
+   
+   
+   
 </string>
           </argument>
         </arguments>
@@ -101,11 +88,24 @@ if(mouse_check_button_pressed(mb_left)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (player_hp == 0)
-   room_goto(rm_game_over);
-   
-   
-   
+            <string>/// Select tower from menu
+
+// Tower width/height incase that changes. Currenlty all towers are 32*32
+tower_width = 32;
+tower_height = 32;
+
+if(mouse_check_button_pressed(mb_left)){
+    for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
+        if(mouse_x &gt; ((button_margin_v * (i + 1)) - ((tower_width) / 2)) &amp;&amp; mouse_x &lt; ((button_margin_v * (i + 1)) + ((tower_width) / 2))){
+            if(mouse_y &gt; (room_height - button_margin_h) - (tower_height/2) &amp;&amp; mouse_y &lt; (room_height - button_margin_h) + (tower_height/2)){
+                //global.current_tower = global.tower[i];
+                global.current_tower = i;
+            }
+        }
+    }
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -132,15 +132,15 @@ if(mouse_check_button_pressed(mb_left)){
 // We will want to change this with less hard coded numbers.
 
 // Set which tower we went to create
-tower = global.current_tower;
 
-if(tower != noone){
+if(global.current_tower != noone){
+    tower = global.tower[global.current_tower];
     // Not clicking a tower
-    if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, tower, false, true)) {
+    if (money &gt;= global.price[global.current_tower] and !collision_point(mouse_x, mouse_y, tower, false, true)) {
         // Not clicking menu
         if (mouse_y &lt; room_height - menu_height){
             instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),tower);
-            money -= global.price[0];
+            money -= global.price[global.current_tower];
         }
     }
 }
@@ -258,7 +258,7 @@ for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
 
 // Borders around button if selected
 for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
-    if(global.current_tower == global.tower[i]){
+    if(global.current_tower == i){
         draw_set_color(c_white);
         draw_rectangle(((button_margin_v * (i + 1)) - ((tower_width) / 2)), (room_height - button_margin_h) - (tower_height/2), ((button_margin_v * (i + 1)) + ((tower_width) / 2)), (room_height - button_margin_h) + (tower_height/2), true);
     }

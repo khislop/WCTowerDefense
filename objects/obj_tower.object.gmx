@@ -30,6 +30,7 @@ maxCount = 30;
 count = 0;
 fireSpeed = 8;
 range = 200;
+price = 5;
 </string>
           </argument>
         </arguments>
