@@ -28,6 +28,7 @@
             <string>// Instantiate global state vars
 global.in_wave = false;
 global.wave_num = 0;
+global.current_tower = noone;
 
 // Create initial vars
 cost = 5;
@@ -37,6 +38,8 @@ money = 10;
 
 // Run setup scripts
 scr_price();
+
+
 
 </string>
           </argument>
@@ -60,8 +63,49 @@ scr_price();
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Select tower from menu
+
+// Tower width/height incase that changes. Currenlty all towers are 32*32
+tower_width = 32;
+tower_height = 32;
+
+if(mouse_check_button_pressed(mb_left)){
+    for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
+        if(mouse_x &gt; ((button_margin_v * (i + 1)) - ((tower_width) / 2)) &amp;&amp; mouse_x &lt; ((button_margin_v * (i + 1)) + ((tower_width) / 2))){
+            if(mouse_y &gt; (room_height - button_margin_h) - (tower_height/2) &amp;&amp; mouse_y &lt; (room_height - button_margin_h) + (tower_height/2)){
+                global.current_tower = global.tower[i];
+                //show_debug_message("Clicked");
+            }
+        }
+    }
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if (player_hp == 0)
    room_goto(rm_game_over);
+   
+   
+   
 </string>
           </argument>
         </arguments>
@@ -86,9 +130,19 @@ scr_price();
             <kind>1</kind>
             <string>// Spawn tower where clicked
 // We will want to change this with less hard coded numbers.
-if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower, false, true) &amp;&amp; !collision_point(mouse_x, mouse_y, obj_next_wave_button, false, true)) {
-   instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),obj_tower);
-   money -= global.price[0];
+
+// Set which tower we went to create
+tower = global.current_tower;
+
+if(tower != noone){
+    // Not clicking a tower
+    if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, tower, false, true)) {
+        // Not clicking menu
+        if (mouse_y &lt; room_height - menu_height){
+            instance_create((floor(mouse_x / 32) * 32 + 16),(floor(mouse_y / 32) * 32 + 16),tower);
+            money -= global.price[0];
+        }
+    }
 }
 </string>
           </argument>
@@ -112,7 +166,9 @@ if (money &gt;= global.price[0] and !collision_point(mouse_x, mouse_y, obj_tower
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_green);
+            <string>/// Draw grid lines
+
+draw_set_color(c_green);
 
 x = 0;
 y = 0;
@@ -146,7 +202,9 @@ while(y &lt; window_get_height()){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Display the money
+            <string>/// Draw player vars
+
+// Display the money
 draw_set_font(-1);
 draw_set_colour(c_yellow);
 //draw_text_colour(128,64,"Money: " + string(money), c_yellow, c_yellow, c_yellow, c_yellow, 1);
@@ -156,6 +214,56 @@ for (var i = 0; i &lt; player_hp;i++)
 {
     draw_sprite(spr_playerHp,0, i*32,0);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw tower menu
+
+// Menu vars
+menu_height = 96;
+button_margin_v = 48;
+button_margin_h = 48;
+text_margin_h = 16;
+
+// Set halign/valign
+draw_set_valign(fa_center);
+draw_set_halign(fa_center);
+
+// Draw menu
+draw_rectangle_colour(0, room_height - menu_height, room_width, room_height, c_black, c_black, c_black, c_black, c_black);
+
+for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
+    draw_sprite(global.tower[i], 0, button_margin_v * (i + 1), room_height - button_margin_h);
+    draw_set_color(c_white);
+    draw_text(button_margin_v * (i + 1), room_height - text_margin_h, global.price[i]);
+    
+}
+
+// Borders around button if selected
+for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
+    if(global.current_tower == global.tower[i]){
+        draw_set_color(c_white);
+        draw_rectangle(((button_margin_v * (i + 1)) - ((tower_width) / 2)), (room_height - button_margin_h) - (tower_height/2), ((button_margin_v * (i + 1)) + ((tower_width) / 2)), (room_height - button_margin_h) + (tower_height/2), true);
+    }
+}
+
 </string>
           </argument>
         </arguments>
