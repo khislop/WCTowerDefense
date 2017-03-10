@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>obj_spawner.alarm[0] = 1;
 
+instance_create(0, 0, obj_wave_display);
 </string>
           </argument>
         </arguments>

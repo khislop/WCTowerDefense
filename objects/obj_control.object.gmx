@@ -37,6 +37,7 @@ money = 10;
 
 // Run setup scripts
 scr_price();
+
 </string>
           </argument>
         </arguments>

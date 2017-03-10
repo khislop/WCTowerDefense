@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxCount = 120;
-count = 0;
-fireSpeed = 4;
-to_spawn = 0;
+            <string>// Create vars
+
+alpha = 0;
+step = 0;
+fade_duration = room_speed;
+show_duration = room_speed * 2;
+
+// fade stat of 1 means fading in, 0 fading out
+fade_state = 1;
 </string>
           </argument>
         </arguments>
@@ -51,10 +56,7 @@ to_spawn = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-show_debug_message(string(to_spawn));
-global.wave_num = global.wave_num + 1;
-to_spawn = to_spawn + global.wave_num;
+            <string>fade_state = 0;
 </string>
           </argument>
         </arguments>
@@ -77,21 +79,58 @@ to_spawn = to_spawn + global.wave_num;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*show_debug_message(to_spawn);
-show_debug_message(to_spawn &gt; 0);
-show_debug_message(count);*/
-// Count every frame
-count += 1;
-
-// If count is equal to maxcount fire a bullet at neerest enemy
-if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
-    enemy = instance_create(x, y, obj_enemy);
-    enemy.direction = 270;
-    enemy.image_angle = 270;
-    enemy.speed = fireSpeed;
-    count = 0;
-    to_spawn = to_spawn - 1;
+            <string>
+if (alpha &lt; 1 &amp;&amp; fade_state == 1){
+    alpha = alpha + 1/fade_duration;
+    
+    if(alpha == 1){
+        alarm[0] = show_duration;
+    }
 }
+
+if (alpha &gt; 0 &amp;&amp; fade_state == 0){
+    alpha = alpha - 1/fade_duration;
+    
+    if(alpha &lt;= 0){
+        instance_destroy();
+    }
+}
+
+show_debug_message(string(alpha));
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Set font and color
+draw_set_font(fnt_segoe_60);
+draw_set_colour(c_black);
+draw_set_alpha(alpha);
+
+
+//draw_text_transformed(room_width/2, room_height/2,"Wave: " + string(global.wave_num), 4, 4, 0)
+draw_text(room_width/2, room_height/2, "Wave: " + string(global.wave_num))
+
+// Set alpha back so every other drawn thing dosen't disapear
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

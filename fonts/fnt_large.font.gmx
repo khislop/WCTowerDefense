@@ -13,8 +13,7 @@
     <texgroup0>0</texgroup0>
   </texgroups>
   <ranges>
-    <range0>33,33</range0>
-    <range0>65,122</range0>
+    <range0>32,255</range0>
   </ranges>
   <glyphs>
     <glyph character="32" x="2" y="2" w="38" h="58" shift="38" offset="0"/>

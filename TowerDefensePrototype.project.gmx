@@ -37,6 +37,8 @@
     <font>fonts\fnt_large_jp</font>
     <font>fonts\fnt_small</font>
     <font>fonts\fnt_small_jp</font>
+    <font>fonts\fnt_arial_60</font>
+    <font>fonts\fnt_segoe_60</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_tower</object>
@@ -47,6 +49,7 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_options</object>
     <object>objects\obj_next_wave_button</object>
+    <object>objects\obj_wave_display</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
