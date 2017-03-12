@@ -52,6 +52,7 @@
     <object>objects\obj_options</object>
     <object>objects\obj_next_wave_button</object>
     <object>objects\obj_wave_display</object>
+    <object>objects\obj_grid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

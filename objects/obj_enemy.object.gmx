@@ -35,7 +35,7 @@ direction = 270;
 // Don't animate the enemy, animation frames are used for life visualization
 image_speed = 0;
 // Move along the path
-path_start(pth_rectangle, speed, path_action_stop,1);
+//path_start(pth_rectangle, speed, path_action_stop,1);
 
 // Variables for scr_move_rectangle
 width = 608;
@@ -71,14 +71,30 @@ y2 = y + height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//scr_move_rectangle();
+            <string>/*
+//scr_move_rectangle();
 grid=mp_grid_create(0, 0, room_width/32, room_height/32, 32, 32);
 path = path_add();
 mp_grid_add_instances(path, obj_tower, true);
 mp_grid_path(grid, path, x, y, 500, 500, 1);
 path_start(path,3,"",true);
 
+*/
 
+// Create tha path. If we have performance problems we should puth this in a timer so it dosen't create it EVERY frame
+path = path_add();
+
+// End destination for the enemy objects
+x_dest = room_width + 32;
+y_dest = room_height - 128;
+// Snaps the destination to the grid
+x_dest_snap = (x_dest div 32) * 32 + 16;
+y_dest_snap = (y_dest div 32) * 32 + 16;
+
+
+if(mp_grid_path(global.grid, path, x, y, x_dest_snap, y_dest_snap, true)){
+    path_start(path, 2, path_action_stop, false);
+}
 </string>
           </argument>
         </arguments>

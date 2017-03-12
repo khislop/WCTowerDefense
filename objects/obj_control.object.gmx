@@ -33,7 +33,7 @@ global.current_tower = noone;
 // Create initial vars
 cost = 5;
 player_hp = 5;
-money = 50;
+money = 5000;
 
 
 // Run setup scripts
@@ -144,6 +144,9 @@ if(global.current_tower != noone){
         }
     }
 }
+
+// Add towers as walls to the pathing grid
+mp_grid_add_instances(global.grid, obj_tower, true);
 </string>
           </argument>
         </arguments>
