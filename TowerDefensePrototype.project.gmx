@@ -26,6 +26,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_predictive_aim.gml</script>
+    <script>scripts\scr_predictive_aim_paths.gml</script>
     <script>scripts\scr_move_rectangle.gml</script>
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_price.gml</script>
