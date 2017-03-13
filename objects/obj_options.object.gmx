@@ -75,6 +75,11 @@ push = max(keyboard_check_released(vk_space), keyboard_check_released(vk_enter),
 if(push = 1){
     scr_options(); 
 }
+
+if (mouse_x &gt; 320 &amp;&amp; mouse_y &gt; 314 &amp;&amp; mouse_x &lt; 382 &amp;&amp; mouse_y &lt; 326 &amp;&amp; mouse_check_button_pressed(mb_left)) {
+    mpos = 0;
+    scr_options();
+}
 </string>
           </argument>
         </arguments>

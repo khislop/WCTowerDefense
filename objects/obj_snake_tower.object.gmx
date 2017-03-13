@@ -54,7 +54,7 @@ price = 5;
           <argument>
             <kind>1</kind>
             <string>draw_sprite(sprite_index, image_index, x, y);
-draw_circle(x, y, range, true);
+//draw_circle(x, y, range, true);
 </string>
           </argument>
         </arguments>
