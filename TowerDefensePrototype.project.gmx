@@ -7,7 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_tower</sprite>
-    <sprite>sprites\spr_tower_2</sprite>
+    <sprite>sprites\spr_skunk_tower</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_tile_ground</sprite>
@@ -15,6 +15,8 @@
     <sprite>sprites\spr_gameover</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_next_wave_button</sprite>
+    <sprite>sprites\spr_snake_tower</sprite>
+    <sprite>sprites\spr_squirrel_tower</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,7 +46,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_tower</object>
-    <object>objects\obj_tower_2</object>
+    <object>objects\obj_skunk_tower</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_spawner</object>
@@ -54,6 +56,8 @@
     <object>objects\obj_next_wave_button</object>
     <object>objects\obj_wave_display</object>
     <object>objects\obj_grid</object>
+    <object>objects\obj_snake_tower</object>
+    <object>objects\obj_squirrel_tower</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

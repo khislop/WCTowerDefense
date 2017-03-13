@@ -256,7 +256,10 @@ draw_set_halign(fa_center);
 draw_rectangle_colour(0, room_height - menu_height, room_width, room_height, c_black, c_black, c_black, c_black, c_black);
 
 for(i = 0; i &lt; array_length_1d(global.tower); i += 1){
-    draw_sprite(global.tower[i], 0, button_margin_v * (i + 1), room_height - button_margin_h);
+    //draw_sprite(global.tower[i], 0, button_margin_v * (i + 1), room_height - button_margin_h);
+    draw_sprite(object_get_sprite(global.tower[i]), 0, button_margin_v * (i + 1), room_height - button_margin_h);
+
+    
     draw_set_color(c_white);
     draw_text(button_margin_v * (i + 1), room_height - text_margin_h, global.price[i]);
     

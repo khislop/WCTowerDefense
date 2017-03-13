@@ -86,8 +86,6 @@ count += 1;
 // If count is equal to maxcount fire a bullet at neerest enemy
 if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
     enemy = instance_create(16, 16, obj_enemy);
-    enemy.direction = 270;
-    enemy.image_angle = 270;
     enemy.speed = fireSpeed;
     count = 0;
     to_spawn = to_spawn - 1;
