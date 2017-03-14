@@ -89,7 +89,13 @@ if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
     enemy.speed = fireSpeed;
     count = 0;
     to_spawn = to_spawn - 1;
+    if (global.in_wave == true)
+    {
+        show_debug_message("Test");}
 }
+else if (to_spawn == 0)
+{
+   global.in_wave = false;}
 </string>
           </argument>
         </arguments>

@@ -36,7 +36,7 @@ global.enemy_speed = 2;
 // Create initial vars
 cost = 5;
 player_hp = 5;
-money = 5000;
+money = 5;
 
 
 // Run setup scripts
@@ -68,6 +68,10 @@ scr_price();
             <kind>1</kind>
             <string>if (player_hp == 0)
    room_goto(rm_game_over);
+if (global.wave_num == 10){
+   if (global.in_wave == false &amp;&amp; !instance_exists(obj_enemy))
+        room_goto(rm_congrat);}
+    
    
    
    
@@ -135,7 +139,6 @@ if(mouse_check_button_pressed(mb_left)){
 // We will want to change this with less hard coded numbers.
 
 // Set which tower we went to create
-
 if(global.current_tower != noone){
     tower = global.tower[global.current_tower];
     // Not clicking a tower

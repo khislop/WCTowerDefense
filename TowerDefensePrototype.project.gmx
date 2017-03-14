@@ -17,6 +17,10 @@
     <sprite>sprites\spr_next_wave_button</sprite>
     <sprite>sprites\spr_snake_tower</sprite>
     <sprite>sprites\spr_squirrel_tower</sprite>
+    <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\spr_again</sprite>
+    <sprite>sprites\spr_gold</sprite>
+    <sprite>sprites\spr_congrat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -58,12 +62,17 @@
     <object>objects\obj_grid</object>
     <object>objects\obj_snake_tower</object>
     <object>objects\obj_squirrel_tower</object>
+    <object>objects\obj_game_over</object>
+    <object>objects\obj_again</object>
+    <object>objects\obj_gold</object>
+    <object>objects\obj_congrat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_options</room>
     <room>rooms\rm_game_over</room>
+    <room>rooms\rm_congrat</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

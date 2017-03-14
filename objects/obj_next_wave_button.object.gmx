@@ -25,9 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_spawner.alarm[0] = 1;
-
-instance_create(0, 0, obj_wave_display);
+            <string>//limit just for now
+if (global.wave_num &lt; 10 &amp;&amp; global.in_wave == false){
+    instance_create(0, 0, obj_wave_display);
+    obj_spawner.alarm[0] = 3;
+    global.in_wave = true;
+}
 </string>
           </argument>
         </arguments>
