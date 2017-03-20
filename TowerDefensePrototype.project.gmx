@@ -11,6 +11,8 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_tile_ground</sprite>
+    <sprite>sprites\spr_tile_ground1</sprite>
+    <sprite>sprites\spr_tile_ground2</sprite>
     <sprite>sprites\spr_playerHp</sprite>
     <sprite>sprites\spr_gameover</sprite>
     <sprite>sprites\spr_cursor</sprite>
@@ -39,6 +41,7 @@
     <script>scripts\scr_options.gml</script>
     <script>scripts\scr_bfs.gml</script>
     <script>scripts\scr_reachable_point.gml</script>
+    <script>scripts\scr_levels.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_large</font>
@@ -66,13 +69,17 @@
     <object>objects\obj_again</object>
     <object>objects\obj_gold</object>
     <object>objects\obj_congrat</object>
+    <object>objects\obj_levels</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_game1</room>
+    <room>rooms\rm_game2</room>
     <room>rooms\rm_options</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\rm_congrat</room>
+    <room>rooms\rm_levels</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

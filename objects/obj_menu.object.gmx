@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>
 menu[0] = "Start";
-menu[1] = "Options";
-menu[2] = "Quit";
+menu[1] = "Level Select";
+menu[2] = "Options";
+menu[3] = "Quit";
 title = "Woodland TOWER DEFENCE";
 
 hspace = 64;
@@ -83,6 +84,7 @@ if(push = 1){
     scr_menu(); 
 }
 
+/*
 if (mouse_x &gt; 319 &amp;&amp; mouse_y &gt; 343 &amp;&amp; mouse_x &lt; 398 &amp;&amp; mouse_y &lt; 355 &amp;&amp; mouse_check_button_pressed(mb_left)) {
     mpos = 0;
     scr_menu();
@@ -97,6 +99,7 @@ if (mouse_x &gt; 319 &amp;&amp; mouse_y &gt; 470 &amp;&amp; mouse_x &lt; 371 &am
     mpos = 2;
     scr_menu();
 }
+*/
 </string>
           </argument>
         </arguments>

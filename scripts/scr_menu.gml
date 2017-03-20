@@ -6,10 +6,15 @@ switch(mpos){
     }
     case 1:
     {
-        room_goto(rm_options);
+        room_goto(rm_levels);
         break;
     }
     case 2:
+    {
+        room_goto(rm_options);
+        break;
+    }
+    case 3:
     {
         game_end();
         break;
