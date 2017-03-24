@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>// Setup initial variables
-maxCount = 45;
+maxCount = 50;
 count = 0;
 fireSpeed = 4;
 range = 200;
@@ -58,15 +58,14 @@ count += 1;
 
 // If count is equal to maxcount fire a bullet at neerest enemy
 if(count == maxCount){
-    
     if (instance_exists(obj_enemy)){
        for (var i = 0; i &lt; instance_number(obj_enemy);i++){
             var instance = instance_find(obj_enemy,i);
             with (instance){
                  // Shoot enemy if in range
-                 if(distance_to_object(instance &lt; range)){
-                     bullet = instance_create(x, y, obj_bullet_aoe);
-                     bullet.speed = fireSpeed;
+                 if(distance_to_object(other) &lt; obj_skunk_tower.range){
+                     bullet = instance_create(other.x,other.y, obj_bullet_aoe);
+                     bullet.speed = obj_skunk_tower.fireSpeed;
                      var angle = scr_predictive_aim_paths(bullet, instance, instance.direction, global.enemy_speed);
                      bullet.direction = angle;
                      bullet.image_angle = angle;}}
