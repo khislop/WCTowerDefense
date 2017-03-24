@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>420</width>
-  <height>298</height>
-  <data>images\bg_game_over.png</data>
+  <width>343</width>
+  <height>227</height>
+  <data>images\Congrat.png</data>
 </background>
