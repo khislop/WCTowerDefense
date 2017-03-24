@@ -26,6 +26,8 @@
     <sprite>sprites\spr_congrat</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_exit</sprite>
+    <sprite>sprites\spr_play_button</sprite>
+    <sprite>sprites\spr_exit_button</sprite>
     <sprite>sprites\spr_bullet_slow</sprite>
     <sprite>sprites\spr_bullet_aoe</sprite>
   </sprites>
@@ -34,7 +36,9 @@
     <background>background\bg_blue</background>
     <background>background\background1</background>
     <background>background\bg_game_over</background>
+    <background>background\bg_menu</background>
     <background>background\Congrat</background>
+    <background>background\background6</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_rectangle</path>
@@ -84,8 +88,12 @@
     <object>objects\obj_levels</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_exit</object>
+    <object>objects\obj_room_click</object>
+    <object>objects\obj_play_button</object>
+    <object>objects\obj_exit_button</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu_click</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_game_over</room>
