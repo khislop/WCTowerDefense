@@ -21,13 +21,15 @@
     <sprite>sprites\spr_squirrel_tower</sprite>
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\spr_again</sprite>
+    <sprite>sprites\spr_next</sprite>
     <sprite>sprites\spr_gold</sprite>
     <sprite>sprites\spr_congrat</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_exit</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\bg_green</background>
+    <background>background\bg_blue</background>
     <background>background\background1</background>
     <background>background\bg_game_over</background>
   </backgrounds>
@@ -69,6 +71,7 @@
     <object>objects\obj_squirrel_tower</object>
     <object>objects\obj_game_over</object>
     <object>objects\obj_again</object>
+    <object>objects\obj_next</object>
     <object>objects\obj_gold</object>
     <object>objects\obj_congrat</object>
     <object>objects\obj_levels</object>
@@ -78,11 +81,11 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_congrat</room>
     <room>rooms\rm_game1</room>
     <room>rooms\rm_game2</room>
     <room>rooms\rm_options</room>
     <room>rooms\rm_game_over</room>
-    <room>rooms\rm_congrat</room>
     <room>rooms\rm_levels</room>
   </rooms>
   <help>
