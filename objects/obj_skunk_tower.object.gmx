@@ -58,7 +58,6 @@ count += 1;
 
 // If count is equal to maxcount fire a bullet at neerest enemy
 if(count == maxCount){
-    if (instance_exists(obj_enemy)){
        for (var i = 0; i &lt; instance_number(obj_enemy);i++){
             var instance = instance_find(obj_enemy,i);
             with (instance){
@@ -71,7 +70,7 @@ if(count == maxCount){
                      bullet.image_angle = angle;}}
        }
     count = 0;
-}}
+}
 
 
 </string>
