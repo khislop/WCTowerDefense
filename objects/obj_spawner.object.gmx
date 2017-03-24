@@ -52,9 +52,10 @@ to_spawn = 0;
           <argument>
             <kind>1</kind>
             <string>
-show_debug_message(string(to_spawn));
+//show_debug_message(string(to_spawn));
 global.wave_num = global.wave_num + 1;
 to_spawn = to_spawn + global.wave_num;
+maxCount = 120 - (global.wave_num*10)
 </string>
           </argument>
         </arguments>
@@ -95,7 +96,8 @@ if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
 }
 else if (to_spawn == 0)
 {
-   global.in_wave = false;}
+   global.in_wave = false;
+}
 </string>
           </argument>
         </arguments>
