@@ -36,7 +36,7 @@ global.enemy_speed = 2;
 // Create initial vars
 cost = 5;
 player_hp = 5;
-money = 5;
+money = 500;
 
 
 // Run setup scripts
@@ -153,6 +153,7 @@ if(global.current_tower != noone){
 
 // Add towers as walls to the pathing grid
 mp_grid_add_instances(global.grid, obj_tower, true);
+mp_grid_add_instances(global.grid, obj_wall, true);
 </string>
           </argument>
         </arguments>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Set variables
 // maxLife needs to be equal to or less than the spr_enemy sprite index number.
-maxLife = 4;
+maxLife = 5000;
 life = maxLife;
 image_angle = 0;
 
@@ -83,8 +83,10 @@ path_start(path,3,"",true);
 path = path_add();
 
 // End destination for the enemy objects
-x_dest = room_width + 32;
-y_dest = room_height - 128;
+//x_dest = room_width + 32;
+//y_dest = room_height - 128;
+x_dest = obj_exit.x;
+y_dest = obj_exit.y;
 // Snaps the destination to the grid
 x_dest_snap = (x_dest div 32) * 32 + 16;
 y_dest_snap = (y_dest div 32) * 32 + 16;

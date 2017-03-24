@@ -55,6 +55,11 @@
     <instance objName="obj_spawner" x="0" y="0" name="inst_AA9656C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_next_wave_button" x="832" y="672" name="inst_B3D29CFF" locked="0" code="" scaleX="1.5" scaleY="1.52380955219269" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="576" y="320" name="inst_61A40ECE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="-32" name="inst_2EB73191" locked="0" code="" scaleX="34" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1024" y="-32" name="inst_93A3DC7A" locked="0" code="" scaleX="1" scaleY="26" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1056" y="672" name="inst_B4D3FDA7" locked="0" code="" scaleX="-34" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="768" name="inst_6FAA0B69" locked="0" code="" scaleX="1" scaleY="-25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_exit" x="992" y="640" name="inst_8C4E2B4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="0" y="192" w="64" h="64" xo="0" yo="0" id="10000007" name="inst_3ACF69E1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
