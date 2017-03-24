@@ -95,6 +95,7 @@
           <argument>
             <kind>1</kind>
             <string>room_goto(rm_game);
+audio_play_sound(Song,0, true);
 </string>
           </argument>
         </arguments>

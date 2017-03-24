@@ -148,7 +148,7 @@ if(life &lt; 1){
     instance_destroy();
     instance_create(x,y,obj_gold);
 }else{
-    image_index = maxLife - life;
+    //image_index = maxLife - life;
 }
 
 with(other){
