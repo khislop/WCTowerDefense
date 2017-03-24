@@ -88,6 +88,8 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_game_over</room>
+    <room>rooms\rm_congrat</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
