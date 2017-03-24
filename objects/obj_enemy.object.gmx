@@ -39,7 +39,7 @@ image_speed = 0;
 // Variables for scr_move_rectangle
 width = 608;
 height = 512;
-
+inst_speed = global.enemy_speed
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
 
@@ -48,6 +48,30 @@ y1 = y;
 x2 = x + width;
 y2 = y + height;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>inst_speed = global.enemy_speed;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -93,7 +117,7 @@ y_dest_snap = (y_dest div 32) * 32 + 16;
 
 
 if(mp_grid_path(global.grid, path, x, y, x_dest_snap, y_dest_snap, true)){
-    path_start(path, global.enemy_speed, path_action_stop, false);
+    path_start(path, inst_speed, path_action_stop, false);
 }
 </string>
           </argument>
@@ -152,7 +176,13 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>inst_speed = 1;
+image_index = 1;
+alarm[1] = 10;
+with(other){
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>
