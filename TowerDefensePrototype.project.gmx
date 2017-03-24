@@ -98,6 +98,7 @@
     <room>rooms\rm_game</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\rm_congrat</room>
+    <room>rooms\rm_game1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
