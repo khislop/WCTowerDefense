@@ -25,11 +25,14 @@
     <sprite>sprites\spr_congrat</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_exit</sprite>
+    <sprite>sprites\spr_bullet_slow</sprite>
+    <sprite>sprites\spr_bullet_aoe</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\bg_game_over</background>
+    <background>background\Congrat</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_rectangle</path>
@@ -54,9 +57,17 @@
     <font>fonts\fnt_segoe_60</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_tower</object>
-    <object>objects\obj_skunk_tower</object>
-    <object>objects\obj_bullet</object>
+    <objects name="towers">
+      <object>objects\obj_tower</object>
+      <object>objects\obj_skunk_tower</object>
+      <object>objects\obj_squirrel_tower</object>
+      <object>objects\obj_snake_tower</object>
+    </objects>
+    <objects name="bullets">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_bullet_slow</object>
+      <object>objects\obj_bullet_aoe</object>
+    </objects>
     <object>objects\obj_enemy</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>
@@ -65,12 +76,8 @@
     <object>objects\obj_next_wave_button</object>
     <object>objects\obj_wave_display</object>
     <object>objects\obj_grid</object>
-    <object>objects\obj_snake_tower</object>
-    <object>objects\obj_squirrel_tower</object>
-    <object>objects\obj_game_over</object>
     <object>objects\obj_again</object>
     <object>objects\obj_gold</object>
-    <object>objects\obj_congrat</object>
     <object>objects\obj_levels</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_exit</object>
