@@ -32,7 +32,7 @@ life = maxLife;
 image_angle = 0;
 
 // Don't animate the enemy, animation frames are used for life visualization
-image_speed = 0;
+image_speed = 0.33;
 // Move along the path
 //path_start(pth_rectangle, speed, path_action_stop,1);
 
@@ -71,7 +71,6 @@ y2 = y + height;
           <argument>
             <kind>1</kind>
             <string>inst_speed = global.enemy_speed;
-image_index = 0;
 </string>
           </argument>
         </arguments>

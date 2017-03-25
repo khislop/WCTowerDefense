@@ -86,8 +86,13 @@ count += 1;
 
 // If count is equal to maxcount fire a bullet at neerest enemy
 if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
-    enemy = instance_create(16, 16, obj_enemy);
-    enemy.speed = fireSpeed;
+    if (global.wave_num &lt; 5) {
+        enemy = instance_create(16, 16, global.enemy[global.wave_num - 1]);
+        enemy.speed = fireSpeed;
+    } else {
+        enemy = instance_create(16, 16, obj_enemy);
+        enemy.speed = fireSpeed;
+    }
     count = 0;
     to_spawn = to_spawn - 1;
     if (global.in_wave == true)

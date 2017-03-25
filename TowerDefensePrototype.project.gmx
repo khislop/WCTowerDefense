@@ -6,12 +6,25 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\Song</sound>
+    <sound>sound\sound1</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_tower</sprite>
-    <sprite>sprites\spr_skunk_tower</sprite>
+    <sprites name="spr_towers">
+      <sprite>sprites\spr_tower</sprite>
+      <sprite>sprites\spr_beaver_tower</sprite>
+      <sprite>sprites\spr_snake_tower</sprite>
+      <sprite>sprites\spr_skunk_tower</sprite>
+      <sprite>sprites\spr_bee_tower</sprite>
+      <sprite>sprites\spr_squirrel_tower</sprite>
+    </sprites>
+    <sprites name="spr_enemies">
+      <sprite>sprites\spr_shopper</sprite>
+      <sprite>sprites\spr_mall_cop</sprite>
+      <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_couple</sprite>
+      <sprite>sprites\spr_construction_worker</sprite>
+    </sprites>
     <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_tile_ground</sprite>
     <sprite>sprites\spr_tile_ground1</sprite>
     <sprite>sprites\spr_tile_ground2</sprite>
@@ -19,8 +32,7 @@
     <sprite>sprites\spr_gameover</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_next_wave_button</sprite>
-    <sprite>sprites\spr_snake_tower</sprite>
-    <sprite>sprites\spr_squirrel_tower</sprite>
+    <sprite>sprites\sprite27</sprite>
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\spr_again</sprite>
     <sprite>sprites\spr_next</sprite>
@@ -69,6 +81,8 @@
       <object>objects\obj_tower</object>
       <object>objects\obj_skunk_tower</object>
       <object>objects\obj_squirrel_tower</object>
+      <object>objects\obj_bee_tower</object>
+      <object>objects\obj_beaver_tower</object>
       <object>objects\obj_snake_tower</object>
     </objects>
     <objects name="bullets">
@@ -76,7 +90,14 @@
       <object>objects\obj_bullet_slow</object>
       <object>objects\obj_bullet_aoe</object>
     </objects>
-    <object>objects\obj_enemy</object>
+    <objects name="enemies">
+      <object>objects\obj_enemy_lumberjack</object>
+      <object>objects\obj_enemy_couple</object>
+      <object>objects\obj_enemy_construction_worker</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_shopper</object>
+      <object>objects\obj_enemy_mall_cop</object>
+    </objects>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>
     <object>objects\obj_menu</object>
