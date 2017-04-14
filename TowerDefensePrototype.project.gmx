@@ -20,7 +20,7 @@
     <sprites name="spr_enemies">
       <sprite>sprites\spr_shopper</sprite>
       <sprite>sprites\spr_mall_cop</sprite>
-      <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_lumberjack</sprite>
       <sprite>sprites\spr_couple</sprite>
       <sprite>sprites\spr_construction_worker</sprite>
     </sprites>

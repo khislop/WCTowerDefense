@@ -90,7 +90,7 @@ if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
         enemy = instance_create(16, 16, global.enemy[global.wave_num - 1]);
         enemy.speed = fireSpeed;
     } else {
-        enemy = instance_create(16, 16, obj_enemy);
+        enemy = instance_create(16, 16, obj_enemy_lumberjack);
         enemy.speed = fireSpeed;
     }
     count = 0;

@@ -27,19 +27,20 @@
             <kind>1</kind>
             <string>/// Set variables
 // maxLife needs to be equal to or less than the spr_enemy sprite index number.
-maxLife = 5;
+maxLife = 10;
 life = maxLife;
 image_angle = 0;
 
 // Don't animate the enemy, animation frames are used for life visualization
-image_speed = 0.1;
+image_speed = 0.33;
 // Move along the path
 //path_start(pth_rectangle, speed, path_action_stop,1);
 
 // Variables for scr_move_rectangle
 width = 608;
 height = 512;
-inst_speed = global.enemy_speed
+true_speed = 2;
+inst_speed = true_speed;
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
 
