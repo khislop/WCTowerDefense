@@ -65,7 +65,7 @@ if(count == maxCount){
     // Shoot enemy if in range
     if(closestEnemy != noone){
         if(distance_to_object(closestEnemy) &lt; range){
-            bullet = instance_create(x, y, obj_bullet);
+            bullet = instance_create(x, y, obj_bullet_stun);
             bullet.speed = fireSpeed;
             var angle = scr_predictive_aim_paths(bullet, closestEnemy, closestEnemy.direction, global.enemy_speed);
             bullet.direction = angle;

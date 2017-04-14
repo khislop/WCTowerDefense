@@ -43,12 +43,35 @@ true_speed = 2;
 inst_speed = true_speed;
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
-
+stunned = false;
 x1 = x;
 y1 = y;
 x2 = x + width;
 y2 = y + height;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stunned = false;
 </string>
           </argument>
         </arguments>
@@ -116,9 +139,35 @@ x_dest_snap = (x_dest div 32) * 32 + 16;
 y_dest_snap = (y_dest div 32) * 32 + 16;
 
 
-if(mp_grid_path(global.grid, path, x, y, x_dest_snap, y_dest_snap, true)){
+if(mp_grid_path(global.grid, path, x, y, x_dest_snap, y_dest_snap, true) and stunned == false){
     path_start(path, inst_speed, path_action_stop, false);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet_stun">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>path_end();
+stunned = true;
+alarm[2] = 10;
+
 </string>
           </argument>
         </arguments>

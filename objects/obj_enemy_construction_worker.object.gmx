@@ -43,7 +43,7 @@ true_speed = 8;
 inst_speed = true_speed;
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
-
+stunned = false;
 x1 = x;
 y1 = y;
 x2 = x + width;

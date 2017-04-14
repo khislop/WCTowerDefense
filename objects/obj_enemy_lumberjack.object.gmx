@@ -29,7 +29,7 @@
 // maxLife needs to be equal to or less than the spr_enemy sprite index number.
 maxLife = 5;
 life = maxLife;
-sprite_index = 0;
+image_index = 0;
 
 // Don't animate the enemy, animation frames are used for life visualization
 //image_speed = 0.33;
@@ -43,7 +43,7 @@ true_speed = 4;
 inst_speed = true_speed;
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;
-
+stunned = false;
 x1 = x;
 y1 = y;
 x2 = x + width;
