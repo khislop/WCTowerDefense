@@ -23,6 +23,7 @@
       <sprite>sprites\spr_lumberjack</sprite>
       <sprite>sprites\spr_couple</sprite>
       <sprite>sprites\spr_construction_worker</sprite>
+      <sprite>sprites\spr_boss</sprite>
     </sprites>
     <sprite>sprites\spr_tile_ground</sprite>
     <sprite>sprites\spr_tile_ground1</sprite>
@@ -106,6 +107,7 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_shopper</object>
       <object>objects\obj_enemy_mall_cop</object>
+      <object>objects\spr_enemy_boss</object>
     </objects>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>

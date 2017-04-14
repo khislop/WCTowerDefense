@@ -31,7 +31,7 @@ global.wave_num = 0;
 global.current_tower = noone;
 
 // We can change how we do this, but right now there are too many things that need to know the enemy speed (which isn't saved in the object cause paths are dumb).
-global.enemy_speed = 5;
+//global.enemy_speed = 5;
 
 // Create initial vars
 cost = 5;
