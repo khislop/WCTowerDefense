@@ -65,7 +65,7 @@ if(count == maxCount){
                  if(distance_to_object(other) &lt; obj_skunk_tower.range){
                      bullet = instance_create(other.x,other.y, obj_bullet_aoe);
                      bullet.speed = obj_skunk_tower.fireSpeed;
-                     var angle = scr_predictive_aim_paths(bullet, instance, instance.direction, global.enemy_speed);
+                     var angle = scr_predictive_aim_paths(bullet, instance, instance.direction, instance.true_speed);
                      bullet.direction = angle;
                      bullet.image_angle = angle;}}
        }

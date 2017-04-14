@@ -26,10 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>//limit just for now
-if (global.wave_num &lt; 10 and global.in_wave == false){
+if (global.wave_num &lt; 10 and global.in_wave == false and obj_spawner.startable == true){
+    global.in_wave = true;
+    show_debug_message(global.in_wave);
     instance_create(0, 0, obj_wave_display);
     obj_spawner.alarm[0] = 5;
-    global.in_wave = true;
+    obj_spawner.startable = false;
+    obj_spawner.alarm[1] = 15;
 }
 </string>
           </argument>
