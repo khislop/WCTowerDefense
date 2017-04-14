@@ -85,7 +85,7 @@ show_debug_message(count);*/
 count += 1;
 
 // If count is equal to maxcount fire a bullet at neerest enemy
-if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
+if((count &gt; maxCount) and (to_spawn &gt; 0)){
     if (global.wave_num &lt; 5) {
         enemy = instance_create(16, 16, global.enemy[global.wave_num - 1]);
         enemy.speed = fireSpeed;
@@ -99,7 +99,7 @@ if((count &gt; maxCount) &amp;&amp; (to_spawn &gt; 0)){
     {
         show_debug_message("Test");}
 }
-else if (to_spawn == 0)
+else if (to_spawn == 0 and !object_exists(obj_enemy))
 {
    global.in_wave = false;
 }
