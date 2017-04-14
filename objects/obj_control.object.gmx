@@ -179,7 +179,7 @@ mp_grid_add_instances(global.grid, obj_wall, true);
             <kind>1</kind>
             <string>/// Draw grid lines
 
-draw_set_color(c_green);
+draw_set_color(c_gray);
 
 x = 0;
 y = 0;
