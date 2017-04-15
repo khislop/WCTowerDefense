@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//limit just for now
+if(obj_control.can_start){
 if (global.wave_num &lt; 10 and global.in_wave == false and obj_spawner.startable == true){
     global.in_wave = true;
     show_debug_message(global.in_wave);
@@ -33,7 +34,7 @@ if (global.wave_num &lt; 10 and global.in_wave == false and obj_spawner.startabl
     obj_spawner.alarm[0] = 5;
     obj_spawner.startable = false;
     obj_spawner.alarm[1] = 15;
-}
+}}
 </string>
           </argument>
         </arguments>

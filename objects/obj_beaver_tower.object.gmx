@@ -67,7 +67,7 @@ if(count == maxCount){
         if(distance_to_object(closestEnemy) &lt; range){
             bullet = instance_create(x, y, obj_bullet_stun);
             bullet.speed = fireSpeed;
-            var angle = scr_predictive_aim_paths(bullet, closestEnemy, closestEnemy.direction, instance.true_speed);
+            var angle = scr_predictive_aim_paths(bullet, closestEnemy, closestEnemy.direction, closestEnemy.true_speed);
             bullet.direction = angle;
             bullet.image_angle = angle;
         }
