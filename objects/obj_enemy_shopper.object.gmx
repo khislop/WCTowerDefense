@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Set variables
 // maxLife needs to be equal to or less than the spr_enemy sprite index number.
-maxLife = 7;
+maxLife = 15;
 life = maxLife;
 image_angle = 0;
 
@@ -39,7 +39,7 @@ image_speed = 0.33;
 // Variables for scr_move_rectangle
 width = 608;
 height = 512;
-true_speed = 4;
+true_speed = 3.5;
 inst_speed = true_speed;
 //x1 = x - 2*speed;
 //y1 = y - 2*speed;

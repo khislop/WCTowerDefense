@@ -36,7 +36,7 @@ global.current_tower = noone;
 // Create initial vars
 cost = 5;
 player_hp = 5;
-money = 500;
+money = 30;
 can_start = false;
 alarm[0] = 100;
 // Run setup scripts

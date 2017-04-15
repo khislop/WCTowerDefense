@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>value = irandom(5) + 1;
+            <string>value = irandom(3) + 1;
 </string>
           </argument>
         </arguments>

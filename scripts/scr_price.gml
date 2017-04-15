@@ -6,7 +6,7 @@ global.tower[1] = obj_snake_tower;
 global.price[1] = 5;
 
 global.tower[2] = obj_squirrel_tower;
-global.price[2] = 1;
+global.price[2] = 2;
 
 global.tower[3] = obj_beaver_tower;
 global.price[3] = 10;

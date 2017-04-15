@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Set variables
 // maxLife needs to be equal to or less than the spr_enemy sprite index number.
-maxLife = 10;
+maxLife = 40;
 life = maxLife;
 image_angle = 0;
 

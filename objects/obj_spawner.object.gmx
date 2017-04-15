@@ -113,7 +113,17 @@ if((count &gt; maxCount) and (to_spawn &gt; 0)){
     if (global.wave_num &lt; 5) {
         enemy = instance_create(16, 16, global.enemy[global.wave_num - 1]);
         enemy.speed = fireSpeed;
-    } else {
+    } else if (global.wave_num == 9){
+        if (to_spawn mod 2 == 0) {
+            enemy = instance_create(16, 16, global.enemy[0])
+            enemy.speed = fireSpeed;
+        }
+        else {
+            enemy = instance_create(16, 16, global.enemy[1])
+            enemy.speed = fireSpeed;
+        }
+    }
+    else {
         enemy = instance_create(16, 16, obj_enemy_lumberjack);
         enemy.speed = fireSpeed;
     }

@@ -54,6 +54,7 @@ price = 5;
           <argument>
             <kind>1</kind>
             <string>// Destroy object when right clicked
+obj_control.money = obj_control.money + price;
 instance_destroy();
 </string>
           </argument>
