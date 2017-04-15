@@ -107,7 +107,7 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_shopper</object>
       <object>objects\obj_enemy_mall_cop</object>
-      <object>objects\spr_enemy_boss</object>
+      <object>objects\obj_enemy_boss</object>
     </objects>
     <object>objects\obj_spawner</object>
     <object>objects\obj_control</object>

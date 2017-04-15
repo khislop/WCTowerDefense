@@ -30,6 +30,7 @@ count = 0;
 fireSpeed = 4;
 to_spawn = 0;
 startable = true;
+boss_spawned = false;
 </string>
           </argument>
         </arguments>
@@ -118,14 +119,14 @@ if((count &gt; maxCount) and (to_spawn &gt; 0)){
     }
     count = 0;
     to_spawn = to_spawn - 1;
-    if (global.in_wave == true)
-    {
-        show_debug_message("Test");}
+    if(global.wave_num == 10 and boss_spawned == false){
+        enemy = instance_create(16,16, obj_enemy_boss);
+        enemy.speed = fireSpeed;
+        boss_spawned = true;}   
 }
 else if (instance_number(obj_enemy) == 0 and startable == true)
 {
    global.in_wave = false;
-   show_debug_message("Here");
 }
 </string>
           </argument>
